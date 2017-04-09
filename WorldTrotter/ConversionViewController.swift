@@ -13,6 +13,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
+    let digits: Set = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "-"]
+    
     var fahrenheitValue: Measurement<UnitTemperature>? {
         didSet {
             updateCelsiusLabel()
@@ -65,9 +67,10 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
         
-        let digits: Set = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "-"]
         let existingTextHasDecimalSeperator = textField.text?.range(of: ".")
         let replacementTextHasDecimalSeperator = string.range(of: ".")
+        let lateNegativeSign = !(textField.text?.isEmpty)! && (string.range(of: "-") != nil)
+        print(lateNegativeSign)
         
         for char in string.characters {
             if !digits.contains(String(char)) {
@@ -75,8 +78,9 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
-        if existingTextHasDecimalSeperator != nil,
-            replacementTextHasDecimalSeperator != nil {
+        if ((existingTextHasDecimalSeperator != nil) &&
+            (replacementTextHasDecimalSeperator != nil)) ||
+            (lateNegativeSign == true) {
             return false
         } else {
             return true
