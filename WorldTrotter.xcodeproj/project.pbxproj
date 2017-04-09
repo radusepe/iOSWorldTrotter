@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1773959F1E9AB1DF00541A3E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1773959E1E9AB1DF00541A3E /* MapKit.framework */; };
+		177395A11E9AB68400541A3E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177395A01E9AB68400541A3E /* MapViewController.swift */; };
 		17897E381E98143D007F92C6 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17897E371E98143D007F92C6 /* ConversionViewController.swift */; };
 		17D6F7F81E95AE61004F3965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6F7F71E95AE61004F3965 /* AppDelegate.swift */; };
 		17D6F7FD1E95AE61004F3965 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17D6F7FB1E95AE61004F3965 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1773959E1E9AB1DF00541A3E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		177395A01E9AB68400541A3E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		17897E371E98143D007F92C6 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		17D6F7F41E95AE61004F3965 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D6F7F71E95AE61004F3965 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1773959F1E9AB1DF00541A3E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1773959D1E9AB1DF00541A3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1773959E1E9AB1DF00541A3E /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		17D6F7EB1E95AE60004F3965 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +94,7 @@
 				17D6F80B1E95AE61004F3965 /* WorldTrotterTests */,
 				17D6F8161E95AE61004F3965 /* WorldTrotterUITests */,
 				17D6F7F51E95AE61004F3965 /* Products */,
+				1773959D1E9AB1DF00541A3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				17897E371E98143D007F92C6 /* ConversionViewController.swift */,
+				177395A01E9AB68400541A3E /* MapViewController.swift */,
 				17D6F7F71E95AE61004F3965 /* AppDelegate.swift */,
 				17D6F7FB1E95AE61004F3965 /* Main.storyboard */,
 				17D6F7FE1E95AE61004F3965 /* Assets.xcassets */,
@@ -260,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17897E381E98143D007F92C6 /* ConversionViewController.swift in Sources */,
+				177395A11E9AB68400541A3E /* MapViewController.swift in Sources */,
 				17D6F7F81E95AE61004F3965 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -40,7 +40,26 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("ConversionViewController loaded its view.")
+        
         updateCelsiusLabel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let hour = Calendar.current.component(.hour, from: Date())
+        let day = hour > 5 && hour < 20
+        if day == false {
+            self.view.backgroundColor = UIColor(red: 95.0/255, green: 106.0/255, blue: 122.0/255, alpha: 1.0)
+        }
+    }
+    
+    func getRandomColor() -> UIColor{
+        //Generate between 0 to 1
+        let red:CGFloat = CGFloat(drand48())
+        let green:CGFloat = CGFloat(drand48())
+        let blue:CGFloat = CGFloat(drand48())
+        
+        return UIColor(red:red, green: green, blue: blue, alpha: 1.0)
     }
     
     @IBAction func fahrenheitfieldEditingChanged(_ textField: UITextField) {
